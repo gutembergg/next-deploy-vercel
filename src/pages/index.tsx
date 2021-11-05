@@ -1,21 +1,11 @@
-import type {
-  GetServerSideProps,
-  GetStaticPaths,
-  GetStaticProps,
-  NextPage,
-} from "next";
-import Link from "next/link";
+import type { GetStaticProps, NextPage } from "next";
 import Layout from "../components/Layout";
 
-import ReactPlayer from "react-player";
-import MainComponent from "../components/MainCompoent";
 import Slider from "../components/Slider";
 import {
   createInmotionUsers,
   getProducts2,
 } from "../services/inmotionApi/woocommerceApi";
-import { getProducts } from "../services/woocommerceApi/Products";
-import axios from "axios";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 interface IImage {
@@ -103,7 +93,7 @@ const Home: NextPage<IProducts> = ({ products }) => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const response = await getProducts2();
   const products = response.data;
 
