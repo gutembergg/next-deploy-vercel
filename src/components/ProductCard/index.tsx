@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
 import { IProduct } from "../../pages";
-import { getProducts } from "../../services/woocommerceApi/Products";
 import { CartContext } from "../context/CartContext";
 import { Container, Card, ImageBox, ImageContent } from "./styles";
 

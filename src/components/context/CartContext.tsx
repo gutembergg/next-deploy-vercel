@@ -1,6 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
 import { IProduct } from "../../pages";
-import { IProducts } from "../MainCompoent";
 
 interface Children {
   children: ReactNode;

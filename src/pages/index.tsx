@@ -76,17 +76,8 @@ const Home: NextPage<IProducts> = ({ products }) => {
 
         <button type="submit">Users</button>
       </form>
-      {/* <MainComponent products={products} /> */}
 
-      {/*  <ReactPlayer
-        url="https://www.youtube.com/watch?v=MjicRl4TffQ&t=1s"
-        controls
-      /> */}
       <Slider products={products} />
-
-      {/*   <Link href={`categories/accessoire/t`}>
-        <a>Go to other page</a>
-      </Link> */}
     </Layout>
   );
 };
@@ -96,9 +87,6 @@ export default Home;
 export const getStaticProps: GetStaticProps = async (context) => {
   const response = await getProducts2();
   const products = response.data;
-
-  /*  const _createInmotionUsers = await createInmotionUsers();
-  console.log("createInmotionUsers===>", _createInmotionUsers); */
 
   return {
     props: {
