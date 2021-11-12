@@ -54,6 +54,7 @@ const Home: NextPage<IProducts> = ({ products }) => {
 
   return (
     <Layout>
+      <h1>Test</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
